@@ -34,5 +34,5 @@ Cards pt. 1
 Cards pt. 2
 <img src='scrns/10.png'>
 
-Cards pt. 3
+Cards pt. 3<br>
 <img src='scrns/11.png'>
