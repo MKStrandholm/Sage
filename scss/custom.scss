@@ -1,0 +1,241 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+$theme-colors: (
+  "primary":#abc2b0,//#abc2b0,
+  "primaryBorder": #8ac496,
+  "secondary":#c4b2b3,//#b8aaae,
+  "secondaryBorder": #bd9e9f,
+  "success":#9db87e,
+  "successBorder":#98c961,
+  "info":#7c8691,
+  "infoBorder":#759ac4,//#616f8b,
+  "warning":#ecd69a,
+  "warningBorder":#e2c167,
+  "danger": #dda987,
+  "dangerBorder": #d69264,
+  "dangerLight": #cc9898,
+  "light": #d1e6d3,
+  "lightBorder": #b6e6ba,
+  "veryLight": #eef7ef,
+  "dark": #576359,
+  "darkBorder": #6c8f72,
+  "searchButton": #7a9680
+  );
+
+
+// Body elements (global)
+$body-bg: rgb(74, 75, 72);
+$body-color: rgb(255, 255, 255); // e6e6e6
+$gray-600: rgb(147, 150, 146);
+
+// Table
+$table-color: #999999;
+$table-bg-level: -1;
+$table-border-level: 0;
+$table-color: $body-bg;
+
+// Forms
+$input-bg: #F1F1F1;
+$form-feedback-invalid-color: #d45365;
+$custom-control-indicator-checked-color: map.get($theme-colors, "dark");
+$custom-control-indicator-checked-bg: map.get($theme-colors, "primary");
+$custom-control-indicator-bg: map.get($theme-colors, "dark");
+$input-group-addon-color: #FFF;
+$custom-file-color: map.get($theme-colors, "dark");
+$custom-file-border-radius: 0px;
+
+// Nav
+$nav-tabs-link-active-color: #e6e6e6;
+
+// Buttons
+//$border-width: 3px;
+
+// List groups
+$list-group-hover-bg: map.get($theme-colors, "veryLight");
+
+// Breadcrumbs
+$breadcrumb-bg: map.get($theme-colors, "primary");
+$breadcrumb-active-color: #FFF;
+$breadcrumb-divider-color: map.get($theme-colors, "dark");
+
+// Dropdowns
+$dropdown-link-hover-bg: map.get($theme-colors, "searchButton");
+$dropdown-divider-bg: #98ac9c;
+
+// Progress Bars
+$progress-height: 0.7rem;
+$progress-border-radius: 0.15rem;
+$progress-bg: #f5f5f5;
+$progress-bar-animation-timing: 0.5s linear infinite;
+
+// Pagination
+$pagination-bg: $body-bg;
+$pagination-border-width: 1px;
+$pagination-border-color: $gray-600;
+$pagination-active-bg: map.get($theme-colors, "searchButton");
+$pagination-disabled-bg: map.get($theme-colors, "primary");
+$pagination-disabled-color: map.get($theme-colors, "searchButton");
+$pagination-disabled-border-color: $gray-600;
+$pagination-hover-bg: map.get($theme-colors, "searchButton");
+$pagination-hover-border-color: map.get($theme-colors, "searchButton");
+$pagination-hover-color: #FFF;
+
+// Toasts
+$toast-background-color: map.get($theme-colors, "primary");
+$toast-color: map.get($theme-colors, "dark");
+$toast-header-background-color: map.get($theme-colors, "light");
+$toast-header-color: map.get($theme-colors, "dark");
+
+// Alerts
+$alert-bg-level: -5;
+$alert-border-level: -4;
+
+// Popovers
+$popover-bg: #FFF;
+$popover-border-width: 0;
+$popover-header-color: $body-bg;
+$popover-body-color:  $body-bg;
+
+// Tooltips
+$tooltip-bg: #FFF;
+$tooltip-color: $body-bg;
+
+// Border sizing
+$border-radius: 0.5rem;
+$border-radius-lg: 0.6rem;
+$border-radius-sm:  0.4rem;
+$card-border-width: 0.2rem;
+$card-border-radius: 0.15rem;
+
+
+// Settings
+$enable-gradients: true;
+//$font-size-base: 15;
+$font-family-base: "Mitr", "sans-serif";
+$yiq-contrasted-threshold: 100;
+
+// Customize radio buttons
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #576359;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+#search1, #search2, #search3 {
+  border-radius: 0.2rem;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn {
+  border-width: 0px 1px 4px 1px;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.btn-primary {
+  border-color: #7d9596;
+}
+
+.btn-outline-primary {
+  border-width: 1px 1px 4px 1px;
+}
+
+.btn-secondary {
+  border-color: #928699;
+}
+
+.btn-outline-secondary {
+  border-width: 1px 1px 4px 1px;
+}
+.btn-success {
+  border-color: #729268;
+}
+
+.btn-outline-success {
+  border-width: 1px 1px 4px 1px;
+}
+.btn-info {
+  border-color: #616b75;
+}
+
+.btn-outline-info {
+  border-width: 1px 1px 4px 1px;
+}
+.btn-warning {
+  border-color: #b8b267;
+}
+
+.btn-outline-warning {
+  border-width: 1px 1px 4px 1px;
+}
+.btn-danger {
+  border-color: #af8365;
+}
+
+.btn-outline-danger {
+  border-width: 1px 1px 4px 1px;
+}
+.btn-search {
+  border-width: 0px 2px 2px 0px;
+  border-color: rgb(105, 129, 106);//#67866e;
+}
+
+.input-group-text {
+  border-width: 0;
+  color: #000;
+}
+
+.custom-file-label {
+  border-left-color: $body-bg;
+  border-top-color: $body-bg;
+  border-bottom-color: $body-bg;
+  border-right: map.get($theme-colors, "primary");
+  color: map.get($theme-colors, "dark");
+
+}
+.custom-file-label::after {
+  background: map.get($theme-colors, "primary");
+  border-width: 0px;
+}
+
+#upload {
+  border-radius: 0px;
+  height: 99%;
+  margin-top: 1px;
+  border-left-width: 1px;
+  border-left-color: map.get($theme-colors, "searchButton");
+}
+
+.arrow-enabled {
+  background-color: map.get($theme-colors, "primary");
+  color: map.get($theme-colors, "dark");
+}
+
+.list-group-item:hover {
+  background-color: map.get($theme-colors, "veryLight");
+  color: #000;
+}
